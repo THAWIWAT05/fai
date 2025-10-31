@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Love Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Kanit', sans-serif;
+      background: pink;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      font-size: 24px;
+      animation: floatUp linear;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-100vh); opacity: 0; }
+    }
+
+    /* Overlay intro */
+    #overlay {
+      position: fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+      transition: opacity 1.5s ease-in-out;
+    }
+
+    #intro {
+      font-size: 28px;
+      color: #ff4d94;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out; /* ทำให้ fade in/out ช้า */
+      max-width: 80%;
+    }
+  </style>
+</head>
+<body>
+  <div id="overlay">
+    <div id="intro"></div>
+  </div>
+
+  <div id="root"></div>
+
+  <script>
+  const messages = [
+    "หวัดดีคับพี่ฝ้าย 💖",
+    "Happy Birthday naaaaakubb",
+    "มีความสุขเยอะๆนะคับ 🌸",
+    "และก็ยิ้มเยอะๆๆนะคับ😊 🌸"
+  ];
+
+  const overlay = document.getElementById('overlay');
+  const intro = document.getElementById('intro');
+  let index = 0;
+
+  function showMessage() {
+    if(index < messages.length){
+      intro.textContent = messages[index];
+      intro.style.opacity = 1; // fade in
+
+      // ค่อยๆ fade out หลัง 3 วินาที
+      setTimeout(() => {
+        intro.style.opacity = 0;
+        index++;
+        setTimeout(showMessage, 1500); 
+      }, 3000); 
+    } else {
+      // ข้อความสุดท้าย → fade out overlay
+      overlay.style.opacity = 0;
+      setTimeout(() => {
+        overlay.style.display = 'none';
+        startHearts();
+      }, 1500);
+    }
+  }
+
+  // ฟังก์ชันหัวใจลอย
+  function showHearts() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerText = "💓";
+    document.body.appendChild(heart);
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = 3 + Math.random() * 2 + "s";
+
+    setTimeout(() => {
+      heart.remove();
+    }, 5000);
+  }
+
+  function startHearts() {
+    setInterval(showHearts, 800);
+  }
+
+  // ✅ เริ่มทำงานหลังหน้าเว็บโหลดเสร็จ
+  window.onload = function() {
+    showMessage();
+  }
+</script>
+
+</body>
+</html>
