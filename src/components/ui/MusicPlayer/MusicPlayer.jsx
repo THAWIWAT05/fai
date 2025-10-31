@@ -3,8 +3,8 @@ import "./music-player.css";
 
 function MusicPlayer() {
     const [currentMusicDetails, setCurrentMusicDetails] = useState({
-        songName: "ชอบนะ",
-        songArtist: "No One Else",
+        songName: "สุขสันต์วันเกิดนะคับ",
+        songArtist: "SAWADEE CUP",
         songSrc: "./Assets/songs/Llerrz - ชอบนะ.mp3",
         songAvatar: "./Assets/Images/image1.jpg",
     });
@@ -48,8 +48,8 @@ function MusicPlayer() {
 
     const musicAPI = [
         {
-            songName: "ชอบนะ",
-            songArtist: "No One Else",
+        songName: "สุขสันต์วันเกิดนะคับ",
+        songArtist: "SAWADEE CUP",
             songSrc: "./Assets/songs/Llerrz - ชอบนะ.mp3",
             songAvatar: "./Assets/Images/image1.jpg",
         },
