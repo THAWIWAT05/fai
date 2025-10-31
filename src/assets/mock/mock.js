@@ -1,19 +1,7 @@
-import floating1 from "../images/floating/3.gif";
-import floating2 from "../images/floating/4.gif";
+import floating1 from "../images/floating/2.png";
+import floating2 from "../images/floating/1.png";
 import image1 from "../images/1.png";
-import image2 from "../images/2.png";
-import image3 from "../images/3.png";
-import image4 from "../images/4.png";
-import image5 from "../images/5.png";
-import image6 from "../images/6.png";
-import image7 from "../images/7.png";
 import gift1 from "../images/gifts/1.png";
-import gift2 from "../images/gifts/3.png";
-import gift3 from "../images/gifts/4.png";
-import gift4 from "../images/gifts/2.png";
-import gift5 from "../images/gifts/5.png";
-import gift6 from "../images/gifts/2.png";
-import gift7 from "../images/gifts/5.png";
 import star from "../star.svg";
 
 export const _floatingImageFirst = floating1;
