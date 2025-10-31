@@ -1,5 +1,5 @@
-import floating1 from "../images/floating/2.png";
-import floating2 from "../images/floating/1.png";
+import floating1 from "../images/floating/1.png";
+import floating2 from "../images/floating/2.png";
 import image1 from "../images/1.png";
 import gift1 from "../images/gifts/1.png";
 import star from "../star.svg";
