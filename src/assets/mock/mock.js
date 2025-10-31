@@ -1,5 +1,5 @@
 import floating1 from "../images/floating/1.png";
-import floating2 from "../images/floating/2.pmg";
+import floating2 from "../images/floating/2.png";
 import image1 from "../images/1.png";
 import image2 from "../images/2.png";
 import image3 from "../images/3.png";
